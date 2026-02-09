@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V Catalyx — Digital Media</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;scroll-behavior:smooth}
+
+body{
+background:#0a0a0f;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+/* LOGO */
+
+.logo img{
+height:70px;
+filter:drop-shadow(0 0 8px rgba(0,255,213,.4));
+transition:.3s;
+}
+;
+
+.logo img:hover{
+transform:scale(1.08);
+}
+
+/* NAV LINKS */
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:white;
+opacity:.8;
+}
+nav a:hover{opacity:1}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+background:radial-gradient(circle,#002b36,#000);
+}
+
+.hero-logo{
+height:160px;
+margin-bottom:20px;
+filter:drop-shadow(0 0 18px rgba(0,170,255,.5));
+}
+
+
+.hero h1{
+font-size:54px;
+background:linear-gradient(90deg,#00ffd5,#00aaff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+max-width:750px;
+margin-top:20px;
+opacity:.85;
+line-height:1.6;
+}
+
+.btn{
+margin-top:30px;
+padding:14px 30px;
+border-radius:30px;
+border:none;
+font-weight:600;
+cursor:pointer;
+background:linear-gradient(90deg,#00ffd5,#00aaff);
+color:#000;
+transition:.3s;
+}
+.btn:hover{transform:scale(1.05)}
+
+section{padding:100px 8%}
+
+.title{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+/* CARD */
+
+.card{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.1);
+backdrop-filter:blur(10px);
+transition:.3s;
+}
+.card:hover{transform:translateY(-8px)}
+
+.center{
+text-align:center;
+max-width:900px;
+margin:auto;
+opacity:.9;
+line-height:1.7;
+}
+
+/* STATS */
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+text-align:center;
+}
+
+.stat{
+font-size:38px;
+font-weight:700;
+background:linear-gradient(90deg,#00ffd5,#00aaff);
+-webkit-background-clip:text;
+color:transparent;
+}
+.stat-label{opacity:.7}
+
+/* CONTACT */
+
+.contact-box{
+background:rgba(255,255,255,.05);
+padding:40px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.1);
+max-width:600px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+background:#111;
+color:white;
+}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:.6;
+}
+
+/* ANIMATION */
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">
+<img src="logo.jpeg" alt="V Catalyx Logo">
+</div>
+
+<div>
+<a href="#services">Services</a>
+<a href="#process">Process</a>
+<a href="#portfolio">Work</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero fade">
+
+<img src="logo.jpeg" class="hero-logo">
+
+<h1>Catalyzing Digital Growth</h1>
+
+<p>
+V Catalyx accelerates brands through creative storytelling, performance marketing,
+and digital strategy — transforming attention into measurable growth.
+</p>
+
+<button class="btn" onclick="go('services')">Explore</button>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+<h2 class="title fade">Services</h2>
+
+<div class="grid">
+
+<div class="card fade"><h3>Social Growth</h3><p>Audience building & engagement strategies.</p></div>
+<div class="card fade"><h3>Creative Content</h3><p>Visual storytelling that converts.</p></div>
+<div class="card fade"><h3>Performance Ads</h3><p>ROI-focused marketing campaigns.</p></div>
+<div class="card fade"><h3>Brand Identity</h3><p>Memorable positioning & visuals.</p></div>
+
+</div>
+</section>
+
+<!-- IMPACT -->
+
+<section>
+<h2 class="title fade">Impact Driven</h2>
+
+<div class="stats fade">
+
+<div>
+<div class="stat">200%</div>
+<div class="stat-label">Avg Growth</div>
+</div>
+
+<div>
+<div class="stat">50+</div>
+<div class="stat-label">Campaigns</div>
+</div>
+
+<div>
+<div class="stat">10x</div>
+<div class="stat-label">Visibility Boost</div>
+</div>
+
+</div>
+</section>
+
+<!-- PROCESS -->
+
+<section id="process">
+<h2 class="title fade">Our Process</h2>
+
+<div class="grid">
+
+<div class="card fade"><h3>Discovery</h3><p>Understand brand goals & audience.</p></div>
+<div class="card fade"><h3>Strategy</h3><p>Growth roadmap creation.</p></div>
+<div class="card fade"><h3>Execution</h3><p>Creative campaigns launch.</p></div>
+<div class="card fade"><h3>Optimization</h3><p>Continuous scaling & refinement.</p></div>
+
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+<h2 class="title fade">Featured Work</h2>
+
+<div class="grid">
+
+<div class="card fade"><h3>Brand Revamp</h3><p>Identity transformation project.</p></div>
+<div class="card fade"><h3>Social Campaign</h3><p>High engagement strategy.</p></div>
+<div class="card fade"><h3>Ad Funnel</h3><p>Conversion-driven system.</p></div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section>
+<h2 class="title fade">About V Catalyx</h2>
+
+<p class="center fade">
+We engineer digital momentum. Blending analytics with creativity,
+we build ecosystems that scale, connect, and convert in today’s fast digital world.
+</p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+<h2 class="title fade">Contact</h2>
+
+<div class="contact-box fade">
+
+<input placeholder="Your Name">
+<input placeholder="Email">
+<textarea rows="4" placeholder="Message"></textarea>
+
+<button class="btn">Send Message</button>
+
+<p style="margin-top:20px">
+Email: vcatalyx@gmail.com<br>
+Phone: +91 9626742620
+</p>
+
+</div>
+</section>
+
+<footer>
+© 2026 V Catalyx — Digital Media
+</footer>
+<footer>
+    Veera's Design
+</footer>
+
+<script>
+
+function go(id){
+document.getElementById(id).scrollIntoView();
+}
+
+const fades=document.querySelectorAll(".fade");
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add("show");
+}
+});
+});
+
+fades.forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
